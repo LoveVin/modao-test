@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './components/Card'
 import './reset.css'
+import AddCard from './components/AddCard';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Card color="#80d294" groupName="墨刀实验室" locked={false} private={true} itemCount={5}/>
         <Card color="#80d294" groupName="墨刀实验室" locked={true} private={false} itemCount={5}/>
         <Card color="#80d294" groupName="墨刀实验室" locked={true} private={true} itemCount={5}/>
+        <AddCard/>
     </div>
   );
 }
