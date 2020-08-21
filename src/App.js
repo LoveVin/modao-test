@@ -2,6 +2,10 @@ import React from 'react';
 import Card from './components/Card'
 import './reset.css'
 
+import x from './icons/lock.svg'
+
+console.log(x)
+
 function App() {
 
   return (
