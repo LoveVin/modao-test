@@ -1,11 +1,22 @@
 import React from 'react';
+import Card from './components/Card'
+import './reset.css'
 
 function App() {
+
   return (
     <div className="App">
-      我是App
+      <Card color="#80d294" groupName="墨刀实验室" itemCount={5}/>
     </div>
   );
+}
+
+function ajax(url){
+    setTimeout(()=>{
+        return {
+
+        }
+    },3000)
 }
 
 export default App;
