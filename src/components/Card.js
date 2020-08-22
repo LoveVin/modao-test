@@ -12,7 +12,7 @@ const CardWrapper = styled.div`
     &:hover{
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
-    border: ${props => props.locked ? '2px solid #c8cccf' : 'none'};
+    border: ${props => props.locked ? '2px solid #c8cccf' : '2px solid transparent'};
 `;
 
 const MainColor = styled.div`
