@@ -4,6 +4,7 @@ require('../icons/view-off.svg')
 require('../icons/add.svg')
 require('../icons/down.svg')
 require('../icons/up.svg')
+require('../icons/loading.svg')
 
 const Icon = (props) => {
     return (

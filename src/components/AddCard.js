@@ -3,14 +3,15 @@ import Icon from './Icon';
 import styled from 'styled-components';
 
 const AddCardWrapper = styled.div`
+  height: 160px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #8f9da4;
   background-color: white;
-  padding: 30px 25px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   &:hover{
     box-shadow: 0 0 15px rgba(0,0,0,0.2);

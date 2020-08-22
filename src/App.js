@@ -5,62 +5,58 @@ import AddCard from './components/AddCard';
 import Filter from './components/Filter';
 import styled from 'styled-components';
 
+import store from './store/store';
+import Icon from './components/Icon';
+
 const AppWrapper = styled.div`
-  margin: 50px;
+  margin: 100px;
   border: 1px solid red;
+  position: relative;
 `;
 
 const CardGroupWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   border: 1px solid blue;
+  margin-right: -20px;
 `;
 
+const Loading = styled.div`
+  text-align: center;
+  padding-top: 100px;
+`
+
 const Space = styled.div`
-  min-width: 300px;
+  min-width: 310px;
   margin-right: 20px;
   margin-bottom: 20px;
 `;
 
 function App() {
-
+    const { cardList } = store.getState()
     return (
         <AppWrapper className="App">
             <Filter/>
-            <CardGroupWrapper>
-                <Space>
-                    <Card color="#80d294" groupName="墨刀实验室" locked={false} private={false} itemCount={5}/>
-                </Space>
-                <Space>
-                    <Card color="#80d294" groupName="墨刀实验室" locked={false} private={true} itemCount={5}/>
-                </Space>
-                <Space>
-                    <Card color="#80d294" groupName="墨刀实验室" locked={true} private={false} itemCount={5}/>
-                </Space>
-                <Space>
-                    <Card color="#80d294" groupName="墨刀实验室" locked={true} private={true} itemCount={5}/>
-                </Space>
-                <Space>
-                    <AddCard/>
-                </Space>
-            </CardGroupWrapper>
+            {cardList.length > 0 ? (
+                    <CardGroupWrapper>
+                        {cardList.map((item, index) => (
+                            <Space key={index}>
+                                <Card groupName={item.name} color={item.color} locked={item.locked} private={item.private} itemCount={item.itemCount}/>
+                            </Space>
+                        ))}
+                        <Space>
+                            <AddCard/>
+                        </Space>
+                    </CardGroupWrapper>
+
+                ) : (
+                    <Loading>
+                        加载中...
+                    </Loading>
+                )
+            }
         </AppWrapper>
     );
-}
-
-function ajax(url) {
-    return new Promise((resolve, reject)=>{
-        setTimeout(() => {
-            resolve([
-                { name: '墨刀实验室', color: "#80d294", locked: false, private: false, itemCount: 3},
-                { name: '墨刀魔法棒团队', color: "#f7c273", locked: false, private: false, itemCount: 3},
-                { name: '超级工作组', color: "#f2908d", locked: false, private: true, itemCount: 3},
-                { name: '冷笑客服组', color: "#e38073", locked: false, private: false, itemCount: 3},
-                { name: '设计部门', color: "#f8c767", locked: false, private: false, itemCount: 3},
-                { name: 'Third Reactor', color: "#8dcaeb", locked: true, private: true, itemCount: 3}
-            ])
-        }, 2000);
-    })
 }
 
 export default App;
