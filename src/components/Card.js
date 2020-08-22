@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import Icon from './Icon'
 
 const CardWrapper = styled.div`
-    height: 160px;
+    min-width: 300px;
+    height: 150px;
     cursor: pointer;
     display: flex;
-    padding: 25px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     background-color: white;

@@ -3,7 +3,8 @@ import Icon from './Icon';
 import styled from 'styled-components';
 
 const AddCardWrapper = styled.div`
-  height: 160px;
+  min-width: 300px;
+  height: 150px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,7 @@ const AddCardWrapper = styled.div`
 
 const AddCard = ()=>{
     return (
-        <AddCardWrapper>
+        <AddCardWrapper onClick={() => alert("该功能待完善")}>
             <Icon name="add" fill="#c9cdd0"/>
             <div>新建项目组</div>
         </AddCardWrapper>
