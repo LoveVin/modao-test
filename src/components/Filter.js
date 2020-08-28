@@ -1,9 +1,9 @@
 import React from 'react';
 import Icon from './Icon';
 import store from '../store/store';
-import FilterWrapper from './filterStyles/FilterWrapper';
-import Title from './filterStyles/Title';
-import Options from './filterStyles/Options';
+import FilterWrapper from '../styles/Filter/FilterWrapper';
+import Title from '../styles/Filter/Title';
+import Options from '../styles/Filter/Options';
 
 const Filter = ()=>{
     const { closed , currentFilter } = store.getState()

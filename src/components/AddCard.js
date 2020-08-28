@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from './Icon';
-import AddCardWrapper from './addCard/AddCardWrapper';
+import AddCardWrapper from '../styles/AddCard/AddCardWrapper';
 
 const AddCard = ()=>{
     return (

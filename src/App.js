@@ -4,9 +4,9 @@ import './reset.css';
 import AddCard from './components/AddCard';
 import Filter from './components/Filter';
 import store from './store/store';
-import AppWrapper from './components/appStyles/AppWrapper';
-import CardGroupWrapper from './components/appStyles/CardGroupWrapper';
-import Loading from './components/appStyles/Loading';
+import AppWrapper from './styles/App/AppWrapper';
+import CardGroupWrapper from './styles/App/CardGroupWrapper';
+import Loading from './styles/App/Loading';
 
 function App() {
     const { cardList } = store.getState()

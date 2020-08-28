@@ -1,8 +1,8 @@
 import React from 'react';
 import Icon from './Icon'
-import CardWrapper from './card/CardWrapper';
-import MainColor from './card/MainColor';
-import GroupInfo from './card/GroupInfo';
+import CardWrapper from '../styles/Card/CardWrapper';
+import MainColor from '../styles/Card/MainColor';
+import GroupInfo from '../styles/Card/GroupInfo';
 
 const Card = (props) => {
     return (
